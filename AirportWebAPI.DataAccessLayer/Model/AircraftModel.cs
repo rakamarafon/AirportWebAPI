@@ -4,9 +4,8 @@ using System.Text;
 
 namespace AirportWebAPI.DataAccessLayer.Model
 {
-    public class AircraftModel
-    {
-        public int Id { get; set; }
+    public class AircraftModel : BaseModelObject
+    {       
         public string Name { get; set; }
         public AirTypeModel AirType { get; set; }
         public string ReleaseDate { get; set; }

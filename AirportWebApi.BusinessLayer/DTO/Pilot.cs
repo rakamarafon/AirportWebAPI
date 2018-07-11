@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AirportWebAPI.BusinessLayer.DTO
 {
-    public class Pilot
+    public class Pilot : BaseObject
     {
         private string _firstName;
         private string _secondName;

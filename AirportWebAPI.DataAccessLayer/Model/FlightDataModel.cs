@@ -4,9 +4,8 @@ using System.Text;
 
 namespace AirportWebAPI.DataAccessLayer.Model
 {
-    public class FlightDataModel
+    public class FlightDataModel : BaseModelObject
     {
-        public int Id { get; set; }
         public int CruisingSpeed { get; set; }
         public int MaxAltitude { get; set; }
         public int FlightRange { get; set; }

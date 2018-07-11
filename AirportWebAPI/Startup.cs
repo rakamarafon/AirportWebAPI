@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using AirportWebAPI.BusinessLayer.DTO;
+using AirportWebAPI.BusinessLayer.Interfaces;
+using AirportWebAPI.BusinessLayer.Services;
+using AirportWebAPI.DataAccessLayer.Interfaces;
+using AirportWebAPI.DataAccessLayer.Model;
+using AirportWebAPI.DataAccessLayer.Repositories;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace AirportWebAPI
 {
@@ -24,6 +25,12 @@ namespace AirportWebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            var mapper = MapperConfiguration().CreateMapper();
+
+            services.AddSingleton<IRepository<PilotModel>, PilotRepository>();
+            services.AddScoped<IService<Pilot>, PilotService>();
+            services.AddScoped(_ => mapper);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +42,16 @@ namespace AirportWebAPI
             }
 
             app.UseMvc();
+        }
+
+        public MapperConfiguration MapperConfiguration()
+        {
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<PilotModel, Pilot>();
+            });
+
+            return config;
         }
     }
 }

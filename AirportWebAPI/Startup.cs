@@ -34,6 +34,9 @@ namespace AirportWebAPI
             services.AddSingleton<IRepository<StewardessesModel>, StewardessesRepository>();
             services.AddScoped<IService<Stewardesses>, StewardessesService>();
 
+            services.AddSingleton<IRepository<CrewModel>, CrewRepository>();
+            services.AddScoped<IService<Crew>, CrewService>();
+
             services.AddScoped(_ => mapper);
         }
 

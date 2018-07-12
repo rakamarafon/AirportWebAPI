@@ -6,7 +6,7 @@ namespace AirportWebAPI.DataAccessLayer.Model
 {
     public class CrewModel : BaseModelObject
     {
-        public PilotModel Pilot { get; set; }
-        public List<StewardessesModel> Stewardesses { get; set; }
+        public int Pilot { get; set; }
+        public List<int> Stewardesses { get; set; }
     }
 }

@@ -6,19 +6,19 @@ namespace AirportWebAPI.BusinessLayer.DTO
 {
     public class Crew
     {
-        private Pilot _pilot;
-        private List<Stewardesses> _stewardesses;
+        private int _pilot;
+        private List<int> _stewardesses;
 
-        public Pilot Pilot
+        public int Pilot
         {
             get { return _pilot; }
-            set { if (value != null) _pilot = value; }
+            set { if (value > 0) _pilot = value; }
         }
 
-        public List<Stewardesses> Stewardesses
+        public List<int> Stewardesses
         {
             get { return _stewardesses; }
-            set { if (value.Count >= 1) _stewardesses = value; }
+            set { if (value.Count >= 0) _stewardesses = value; }
         }
     }
 }

@@ -84,6 +84,9 @@ namespace AirportWebAPI
 
                 cfg.CreateMap<TicketModel, Ticket>();
                 cfg.CreateMap<Ticket, TicketModel>();
+
+                cfg.CreateMap<FlightModel, Flight>();
+                cfg.CreateMap<Flight, FlightModel>();
             });
 
             return config;

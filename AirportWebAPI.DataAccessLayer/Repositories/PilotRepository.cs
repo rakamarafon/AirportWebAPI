@@ -14,10 +14,21 @@ namespace AirportWebAPI.DataAccessLayer.Repositories
             CreateSeeds();
         }
 
+        private void CreateSeeds()
+        {
+            pilots = new List<PilotModel>
+            {
+                new PilotModel { Id = 1, FirstName = "Donald", SecondName = "Trump", BirthDate = "11.01.1960", Experience = 10},
+                new PilotModel { Id = 2, FirstName = "George", SecondName = "Bush" , BirthDate = "29.06.1975", Experience = 5}
+            };
+        }
+
         public PilotModel AddEntry(PilotModel entity)
         {
             if (entity != null)
             {
+                var maxId = pilots.Max(x => x.Id);
+                entity.Id = (maxId + 1);
                 pilots.Add(entity);
                 return entity;
             }
@@ -61,15 +72,6 @@ namespace AirportWebAPI.DataAccessLayer.Repositories
             {
                 return null;
             }
-        }
-
-        private void CreateSeeds()
-        {
-            pilots = new List<PilotModel>
-            {
-                new PilotModel { Id = 1, FirstName = "Donald", SecondName = "Trump", BirthDate = "11.01.1960", Experience = 10},
-                new PilotModel { Id = 2, FirstName = "George", SecondName = "Bush" , BirthDate = "29.06.1975", Experience = 5}
-            };
-        }
+        }      
     }
 }

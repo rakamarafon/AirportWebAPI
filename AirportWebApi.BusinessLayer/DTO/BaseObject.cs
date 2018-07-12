@@ -6,6 +6,6 @@ namespace AirportWebAPI.BusinessLayer.DTO
 {
     public class BaseObject
     {
-        public int Id { get; set; }
+       // public int Id { get; set; }
     }
 }

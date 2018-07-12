@@ -4,8 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AirportWebAPI.Controllers
 {
-    [Produces("application/json")]
-    [Route("api/Pilots")]
+    [Route("api/[controller]")]
     public class PilotsController : Controller
     {
         private readonly IService<Pilot> service;
@@ -23,7 +22,7 @@ namespace AirportWebAPI.Controllers
         }
 
         // GET: api/Pilots/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
             var temp = service.GetById(id);
@@ -72,7 +71,7 @@ namespace AirportWebAPI.Controllers
             }
             else
             {
-                return Ok(string.Format("Pilot with ID {0} was successfuly deleted", temp.Id));
+                return Ok(string.Format("Pilot with ID {0} was successfuly deleted", id));
             }
         }
     }

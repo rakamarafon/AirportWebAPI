@@ -1,42 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AirportWebAPI.BusinessLayer.DTO;
+﻿using AirportWebAPI.BusinessLayer.DTO;
 using AirportWebAPI.BusinessLayer.Interfaces;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AirportWebAPI.Controllers
 {
     [Route("api/[controller]")]
-    public class StewardessesController : Controller
+    public class CrewController : Controller
     {
-        private readonly IService<Stewardesses> service;
+        private readonly IService<Crew> service;
 
-        public StewardessesController(IService<Stewardesses> service)
+        public CrewController(IService<Crew> service)
         {
             this.service = service;
         }
-        // GET: api/Stewardesses
+        // GET: api/Crew
         [HttpGet]
         public IActionResult Get()
         {
             return Ok(service.GetAll());
         }
 
-        // GET: api/Stewardesses/5
+        // GET: api/Crew/5
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
             var temp = service.GetById(id);
-            if (temp == null) return NotFound(string.Format("Stewardesses with this ID {0} not found", id));
+            if (temp == null) return NotFound(string.Format("Crew with this ID {0} not found", id));
             return Ok(temp);
         }
         
-        // POST: api/Stewardesses
+        // POST: api/Crew
         [HttpPost]
-        public IActionResult Post([FromBody]Stewardesses value)
+        public IActionResult Post([FromBody]Crew value)
         {
             var temp = service.AddEntry(value);
             if (temp == null)
@@ -49,9 +44,9 @@ namespace AirportWebAPI.Controllers
             }
         }
         
-        // PUT: api/Stewardesses/5
+        // PUT: api/Crew/5
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody]Stewardesses value)
+        public IActionResult Put(int id, [FromBody]Crew value)
         {
             var temp = service.UpdateEntry(value);
             if (temp == null)
@@ -75,7 +70,7 @@ namespace AirportWebAPI.Controllers
             }
             else
             {
-                return Ok(string.Format("Stewardesses with ID {0} was successfuly deleted", id));
+                return Ok(string.Format("Crew with ID {0} was successfuly deleted", id));
             }
         }
     }

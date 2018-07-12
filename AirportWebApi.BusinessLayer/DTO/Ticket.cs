@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AirportWebAPI.BusinessLayer.DTO
 {
-    public class Ticket
+    public class Ticket : BaseObject
     {
         private double _price;
         private string _flightNumber;

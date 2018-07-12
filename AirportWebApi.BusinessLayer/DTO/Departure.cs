@@ -8,8 +8,8 @@ namespace AirportWebAPI.BusinessLayer.DTO
     {
         private string _flightNumber;
         private string _departureTime;
-        private Crew _crew;
-        private Aircraft _aircraft;
+        private int _crew;
+        private int _aircraft;
 
         public string FlightNumber
         {
@@ -17,22 +17,22 @@ namespace AirportWebAPI.BusinessLayer.DTO
             set { if (value != null) _flightNumber = value; }
         }
 
-        public string DepartureTime
+        public string DepartureDate
         {
             get { return _departureTime; }
             set { if (value != null) _departureTime = value; }
         }
 
-        public Crew CrewMember
+        public int CrewMember
         {
             get { return _crew; }
-            set { if (value != null) _crew = value; }
+            set { if (value > 0) _crew = value; }
         }
 
-        public Aircraft AircraftMember
+        public int AircraftMember
         {
             get { return _aircraft; }
-            set { if (value != null) _aircraft = value; }
+            set { if (value > 0) _aircraft = value; }
         }
     }
 }

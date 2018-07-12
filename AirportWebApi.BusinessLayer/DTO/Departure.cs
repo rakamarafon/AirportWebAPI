@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AirportWebAPI.BusinessLayer.DTO
 {
-    public class Departure
+    public class Departure : BaseObject
     {
         private string _flightNumber;
         private string _departureTime;

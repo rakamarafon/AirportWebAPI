@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AirportWebAPI.BusinessLayer.DTO
 {
-    public class FlightData
+    public class FlightData : BaseObject
     {
         private int _cruisingSpeed;
         private int _maxAltitude;

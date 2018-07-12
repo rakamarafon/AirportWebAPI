@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AirportWebAPI.BusinessLayer.DTO
 {
-    public class AirType
+    public class AirType : BaseObject
     {
         private string _model;
         private int _seatsNumber;

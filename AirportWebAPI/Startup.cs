@@ -90,6 +90,9 @@ namespace AirportWebAPI
 
                 cfg.CreateMap<FlightModel, Flight>();
                 cfg.CreateMap<Flight, FlightModel>();
+
+                cfg.CreateMap<DepartureModel, Departure>();
+                cfg.CreateMap<Departure, DepartureModel>();
             });
 
             return config;

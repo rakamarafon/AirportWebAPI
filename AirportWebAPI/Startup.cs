@@ -52,7 +52,7 @@ namespace AirportWebAPI
         {
             var config = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<PilotModel, Pilot>();
+                cfg.CreateMap<PilotModel, Pilot>(); 
                 cfg.CreateMap<StewardessesModel, Stewardesses>();
             });
 

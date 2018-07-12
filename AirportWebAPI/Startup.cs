@@ -40,6 +40,9 @@ namespace AirportWebAPI
             services.AddSingleton<IRepository<AirTypeModel>, AirTypeRepository>();
             services.AddScoped<IService<AirType>, AirTypeService>();
 
+            services.AddSingleton<IRepository<AircraftModel>, AircraftRepository>();
+            services.AddScoped<IService<Aircraft>, AircraftService>();
+
             services.AddScoped(_ => mapper);
         }
 

@@ -30,6 +30,10 @@ namespace AirportWebAPI
 
             services.AddSingleton<IRepository<PilotModel>, PilotRepository>();
             services.AddScoped<IService<Pilot>, PilotService>();
+
+            services.AddSingleton<IRepository<StewardessesModel>, StewardessesRepository>();
+            services.AddScoped<IService<Stewardesses>, StewardessesService>();
+
             services.AddScoped(_ => mapper);
         }
 
@@ -49,6 +53,7 @@ namespace AirportWebAPI
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<PilotModel, Pilot>();
+                cfg.CreateMap<StewardessesModel, Stewardesses>();
             });
 
             return config;

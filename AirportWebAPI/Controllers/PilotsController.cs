@@ -26,7 +26,7 @@ namespace AirportWebAPI.Controllers
         public IActionResult Get(int id)
         {
             var temp = service.GetById(id);
-            if (temp == null) return NotFound("Pilot with this ID not found");
+            if (temp == null) return NotFound(string.Format("Pilot with this ID {0} not found", id));
             return Ok(temp);
         }
         

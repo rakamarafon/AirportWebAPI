@@ -7,10 +7,10 @@ namespace AirportWebAPI.DataAccessLayer.Model
     public class FlightModel : BaseModelObject
     {
         public string Number { get; set; }
-        public PointModel DeparturePoint { get; set; }
+        public int DeparturePoint { get; set; }
         public string DepartureTime { get; set; }
-        public PointModel DestinationPoint { get; set; }
+        public int DestinationPoint { get; set; }
         public string DestinationTime { get; set; }
-        public List<TicketModel> Tickets { get; set; }
+        public List<int> Tickets { get; set; }
     }
 }

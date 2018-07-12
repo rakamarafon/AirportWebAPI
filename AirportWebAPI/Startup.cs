@@ -46,6 +46,9 @@ namespace AirportWebAPI
             services.AddSingleton<IRepository<TicketModel>, TicketRepository>();
             services.AddScoped<IService<Ticket>, TicketService>();
 
+            services.AddSingleton<IRepository<FlightModel>, FlightRepository>();
+            services.AddScoped<IService<Flight>, FlightService>();
+
             services.AddScoped(_ => mapper);
         }
 

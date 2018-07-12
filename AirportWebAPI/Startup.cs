@@ -66,6 +66,9 @@ namespace AirportWebAPI
 
                 cfg.CreateMap<CrewModel, Crew>();
                 cfg.CreateMap<Crew, CrewModel>();
+
+                cfg.CreateMap<AirTypeModel, AirType>();
+                cfg.CreateMap<AirType, AirTypeModel>();
             });
 
             return config;

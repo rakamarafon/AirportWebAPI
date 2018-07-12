@@ -1,6 +1,6 @@
 ﻿using AirportWebAPI.BusinessLayer.DTO;
 using AirportWebAPI.BusinessLayer.Interfaces;
-using AirportWebAPI.DataAccessLayer.Interfaces;
+using AirportWebAPI.DataAccessLayer.Repositories;
 using AirportWebAPI.DataAccessLayer.Model;
 using AutoMapper;
 using System;
@@ -12,10 +12,10 @@ namespace AirportWebAPI.BusinessLayer.Services
 {
     public class TicketService : IService<Ticket>
     {
-        private readonly IRepository<TicketModel> repository;
+        private readonly BaseRepository<TicketModel> repository;
         private readonly IMapper mapper;
 
-        public TicketService(IRepository<TicketModel> repository, IMapper mapper)
+        public TicketService(BaseRepository<TicketModel> repository, IMapper mapper)
         {
             this.repository = repository;
             this.mapper = mapper;

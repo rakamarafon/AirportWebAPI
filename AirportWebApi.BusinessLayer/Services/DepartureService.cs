@@ -1,6 +1,6 @@
 ﻿using AirportWebAPI.BusinessLayer.DTO;
 using AirportWebAPI.BusinessLayer.Interfaces;
-using AirportWebAPI.DataAccessLayer.Interfaces;
+using AirportWebAPI.DataAccessLayer.Repositories;
 using AirportWebAPI.DataAccessLayer.Model;
 using AutoMapper;
 using System.Collections.Generic;
@@ -10,10 +10,10 @@ namespace AirportWebAPI.BusinessLayer.Services
 {
     public class DepartureService : IService<Departure>
     {
-        private readonly IRepository<DepartureModel> repository;
+        private readonly BaseRepository<DepartureModel> repository;
         private readonly IMapper mapper;
 
-        public DepartureService(IRepository<DepartureModel> repository, IMapper mapper)
+        public DepartureService(BaseRepository<DepartureModel> repository, IMapper mapper)
         {
             this.repository = repository;
             this.mapper = mapper;

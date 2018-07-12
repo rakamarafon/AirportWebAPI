@@ -7,11 +7,11 @@ namespace AirportWebAPI.BusinessLayer.DTO
     public class Flight : BaseObject
     {
         private string _number;             
-        private Point _departurePoint;
+        private int _departurePoint;
         private string _departureTime;
-        private Point _destinationPoint;
+        private int _destinationPoint;
         private string _destinationTime;
-        private List<Ticket> _tickets;
+        private List<int> _tickets;
 
         public string Number
         {
@@ -19,10 +19,10 @@ namespace AirportWebAPI.BusinessLayer.DTO
             set { if (value != null) _number = value; }
         }
 
-        public Point DeparturePoint
+        public int DeparturePoint
         {
             get { return _departurePoint; }
-            set { if (value != null) _departurePoint = value; }
+            set { if (value > 0) _departurePoint = value; }
         }
 
         public string DepartureTime
@@ -31,10 +31,10 @@ namespace AirportWebAPI.BusinessLayer.DTO
             set { if (value != null) _departureTime = value; }
         }
 
-        public Point DestinationPoint
+        public int DestinationPoint
         {
             get { return _destinationPoint; }
-            set { if (value != null) _destinationPoint = value; }
+            set { if (value > 0) _destinationPoint = value; }
         }
 
         public string DestinationTime
@@ -43,7 +43,7 @@ namespace AirportWebAPI.BusinessLayer.DTO
             set { if (value != null) _destinationTime = value; }
         }
 
-        public List<Ticket> Tickets
+        public List<int> Tickets
         {
             get { return _tickets; }
             set { if (value != null) _tickets = value; }

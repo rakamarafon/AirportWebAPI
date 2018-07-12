@@ -1,7 +1,6 @@
 ﻿using AirportWebAPI.BusinessLayer.DTO;
 using AirportWebAPI.BusinessLayer.Interfaces;
 using AirportWebAPI.BusinessLayer.Services;
-using AirportWebAPI.DataAccessLayer.Interfaces;
 using AirportWebAPI.DataAccessLayer.Model;
 using AirportWebAPI.DataAccessLayer.Repositories;
 using AutoMapper;
@@ -28,28 +27,28 @@ namespace AirportWebAPI
 
             var mapper = MapperConfiguration().CreateMapper();
 
-            services.AddSingleton<IRepository<PilotModel>, PilotRepository>();
+            services.AddSingleton<BaseRepository<PilotModel>, PilotRepository>();
             services.AddScoped<IService<Pilot>, PilotService>();
 
-            services.AddSingleton<IRepository<StewardessesModel>, StewardessesRepository>();
+            services.AddSingleton<BaseRepository<StewardessesModel>, StewardessesRepository>();
             services.AddScoped<IService<Stewardesses>, StewardessesService>();
 
-            services.AddSingleton<IRepository<CrewModel>, CrewRepository>();
+            services.AddSingleton<BaseRepository<CrewModel>, CrewRepository>();
             services.AddScoped<IService<Crew>, CrewService>();
 
-            services.AddSingleton<IRepository<AirTypeModel>, AirTypeRepository>();
+            services.AddSingleton<BaseRepository<AirTypeModel>, AirTypeRepository>();
             services.AddScoped<IService<AirType>, AirTypeService>();
 
-            services.AddSingleton<IRepository<AircraftModel>, AircraftRepository>();
+            services.AddSingleton<BaseRepository<AircraftModel>, AircraftRepository>();
             services.AddScoped<IService<Aircraft>, AircraftService>();
 
-            services.AddSingleton<IRepository<TicketModel>, TicketRepository>();
+            services.AddSingleton<BaseRepository<TicketModel>, TicketRepository>();
             services.AddScoped<IService<Ticket>, TicketService>();
 
-            services.AddSingleton<IRepository<FlightModel>, FlightRepository>();
+            services.AddSingleton<BaseRepository<FlightModel>, FlightRepository>();
             services.AddScoped<IService<Flight>, FlightService>();
 
-            services.AddSingleton<IRepository<DepartureModel>, DepartureRepository>();
+            services.AddSingleton<BaseRepository<DepartureModel>, DepartureRepository>();
             services.AddScoped<IService<Departure>, DepartureService>();
 
             services.AddScoped(_ => mapper);

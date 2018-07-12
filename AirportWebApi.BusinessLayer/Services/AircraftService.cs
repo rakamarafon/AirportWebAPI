@@ -1,7 +1,7 @@
 ﻿using AirportWebAPI.BusinessLayer.DTO;
 using AirportWebAPI.BusinessLayer.Interfaces;
-using AirportWebAPI.DataAccessLayer.Interfaces;
 using AirportWebAPI.DataAccessLayer.Model;
+using AirportWebAPI.DataAccessLayer.Repositories;
 using AutoMapper;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +10,10 @@ namespace AirportWebAPI.BusinessLayer.Services
 {
     public class AircraftService : IService<Aircraft>
     {
-        private readonly IRepository<AircraftModel> repository;
+        private readonly BaseRepository<AircraftModel> repository;
         private readonly IMapper mapper;
 
-        public AircraftService(IRepository<AircraftModel> repository, IMapper mapper)
+        public AircraftService(BaseRepository<AircraftModel> repository, IMapper mapper)
         {
             this.repository = repository;
             this.mapper = mapper;

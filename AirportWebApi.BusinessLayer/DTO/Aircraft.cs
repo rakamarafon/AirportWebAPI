@@ -7,7 +7,7 @@ namespace AirportWebAPI.BusinessLayer.DTO
     public class Aircraft
     {
         private string _name;
-        private AirType _airType;
+        private int _airType;
         private string _releaseDate;
         private string _lifeTime;
 
@@ -17,10 +17,10 @@ namespace AirportWebAPI.BusinessLayer.DTO
             set { if (value != null) _name = value; }
         }
 
-        public AirType AirType
+        public int AirType
         {
             get { return _airType; }
-            set { if (value != null) _airType = value; }
+            set { if (value > 0) _airType = value; }
         }
 
         public string ReleaseDate

@@ -54,7 +54,7 @@ namespace AirportWebAPI
             services.AddSingleton<BaseRepository<DepartureModel>, DepartureRepository>();
             services.AddScoped<IService<Departure>, DepartureService>();
 
-            services.AddScoped(_ => mapper);
+            services.AddScoped(_ => mapper);  
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

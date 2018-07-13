@@ -7,7 +7,6 @@ namespace AirportWebAPI.BusinessLayer.DTO
     public class Pilot : Employee
     {
         private int _experience;
-
         public int Experience
         {
             get { return _experience; }

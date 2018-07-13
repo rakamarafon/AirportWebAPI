@@ -5,6 +5,6 @@ using System.Text;
 namespace AirportWebAPI.DataAccessLayer.Model
 {
     public class StewardessesModel : EmployeeModel
-    {        
+    {
     }
 }

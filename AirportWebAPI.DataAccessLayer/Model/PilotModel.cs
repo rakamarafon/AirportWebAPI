@@ -4,11 +4,8 @@ using System.Text;
 
 namespace AirportWebAPI.DataAccessLayer.Model
 {
-    public class PilotModel : BaseModelObject
-    {
-        public string FirstName { get; set; }
-        public string SecondName { get; set; }
-        public string BirthDate { get; set; }
+    public class PilotModel : EmployeeModel
+    {       
         public int Experience { get; set; }
     }
 }

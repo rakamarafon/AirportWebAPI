@@ -33,15 +33,22 @@ namespace AirportWebAPI.Controllers
         [HttpPost]
         public IActionResult Post([FromBody]Aircraft value)
         {
-            var temp = service.AddEntry(value);
-            if (temp == null)
+            if(ModelState.IsValid)
             {
-                return BadRequest();
+                var temp = service.AddEntry(value);
+                if (temp == null)
+                {
+                    return BadRequest();
+                }
+                else
+                {
+                    return Ok(temp);
+                }
             }
             else
             {
-                return Ok(temp);
-            }
+                return BadRequest("Not Valid");
+            }             
         }
         
         // PUT: api/Aircrafts/5

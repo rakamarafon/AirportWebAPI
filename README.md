@@ -3,7 +3,7 @@ _Flights_
 * Get flights list (GET): /api/Flights
 * Get flight by id (GET): /api/Flights/:id
 * Create new flight (POST): /api/Flights
-                           Body: {
+                          * Body: {
                                   number: string,
                                   departurePoint: int,
                                   departureTime: string,
@@ -12,7 +12,7 @@ _Flights_
                                   tiskets: [tisket: int]
                                  }
 * Update flight (PUT) /api/Flights/:id    
-                            Body: {
+                           * Body: {
                                   number: string,
                                   departurePoint: int,
                                   departureTime: string,
@@ -27,12 +27,12 @@ _Tickets_
 * Get tickets list (GET): /api/Tickets
 * Get ticket by id (GET): /api/Tickets/:id
 * Create new flight (POST): /api/Tickets
-                           Body: {
+                          * Body: {
                                   price: double,
                                   flightNumber: string
                                  }
 * Update flight (PUT) /api/Tickets/:id    
-                            Body: {
+                           * Body: {
                                   price: double,
                                   flightNumber: string
                                  }

@@ -126,3 +126,32 @@ _Aircrafts_
                                   lifeTime: string
                                  }
 * Delete aircraft by id (DELETE): /api/Aircrafts/:id 
+
+_AirType_
+* Get airTypes list (GET): /api/AirTypes
+* Get airTypes by id (GET): /api/AirTypes/:id
+* Create new airType (POST): /api/AirTypes
+                           Body: {                                  
+                                  model: string,
+                                  seatsNumber: int,
+                                  FlightData
+                                          {
+                                            cruisingSpeed: int,
+                                            maxAltitude: int,
+                                            flightRange: int,
+                                            carrying: int
+                                          }
+                                 }
+* Update airType (PUT) /api/AirTypes/:id    
+                            Body: {                                  
+                                  model: string,
+                                  seatsNumber: int,
+                                  FlightData
+                                          {
+                                            cruisingSpeed: int,
+                                            maxAltitude: int,
+                                            flightRange: int,
+                                            carrying: int
+                                          }
+                                 }
+* Delete airType by id (DELETE): /api/AirTypes/:id 

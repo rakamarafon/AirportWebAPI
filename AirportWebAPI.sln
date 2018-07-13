@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirportWebAPI", "AirportWebAPI\AirportWebAPI.csproj", "{F9A18387-2FF0-4163-95B9-00B679D95C40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirportWebAPI", "AirportWebAPI\AirportWebAPI.csproj", "{F9A18387-2FF0-4163-95B9-00B679D95C40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirportWebAPI.BusinessLayer", "AirportWebApi.BusinessLayer\AirportWebAPI.BusinessLayer.csproj", "{434395FD-4624-42A8-BE15-1561AFF20AC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirportWebAPI.DataAccessLayer", "AirportWebAPI.DataAccessLayer\AirportWebAPI.DataAccessLayer.csproj", "{3AFAA96E-A619-4F95-BB6A-D1BE86EFB4D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{F9A18387-2FF0-4163-95B9-00B679D95C40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9A18387-2FF0-4163-95B9-00B679D95C40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9A18387-2FF0-4163-95B9-00B679D95C40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{434395FD-4624-42A8-BE15-1561AFF20AC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{434395FD-4624-42A8-BE15-1561AFF20AC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{434395FD-4624-42A8-BE15-1561AFF20AC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{434395FD-4624-42A8-BE15-1561AFF20AC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AFAA96E-A619-4F95-BB6A-D1BE86EFB4D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AFAA96E-A619-4F95-BB6A-D1BE86EFB4D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AFAA96E-A619-4F95-BB6A-D1BE86EFB4D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AFAA96E-A619-4F95-BB6A-D1BE86EFB4D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
